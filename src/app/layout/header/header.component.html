@@ -1,14 +1,32 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-     <mat-icon>menu</mat-icon>
-   </button>
-   <span>My App</span>
-   <span class="example-spacer"></span>
-   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-     <mat-icon>favorite</mat-icon>
-   </button>
-   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
+<mat-toolbar class="secondary-toolbar justify-content-lg-between">
+    <div class="row">
+        <div class="logo text-white row mt-1 m1-2" routerLink="/main">
+            <h1 style="margin-left: 1rem;">App</h1>
+            <mat-icon inline="true">bolt</mat-icon>
+        </div>
+    </div>
+    <button mat-icon-button matTooltip="Change Color Theme" class="settings-button text-white">
+        <mat-icon class="settings-button">invert_colors</mat-icon>
+    </button>
  </mat-toolbar>
- 
+
+<div class="topnav">
+    <a href="#">Portfolio</a>
+    <a href="#">Applications</a>
+    <a href="#">Projects</a>
+    <a href="#">Estimates</a>
+    <a [matMenuTriggerFor] = "menu" >Admin</a>
+    <mat-menu #menu="matMenu">
+        <a href="#"><button mat-menu-item>User</button></a>
+        <a href="#"><button mat-menu-item>Roles</button></a>
+        <a href="#"><button mat-menu-item>Hosting</button></a>
+        <a href="#"><button mat-menu-item>System Lookup</button></a>
+    </mat-menu>
+
+    <div class="search-container">
+        <form>
+            <input type="text">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

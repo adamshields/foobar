@@ -8,6 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { LayoutModule } from './layout/layout.module';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule} from '@angular/material/button';
+
 
 
 @NgModule({
@@ -18,6 +21,8 @@ import { LayoutModule } from './layout/layout.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    // MatMenuModule,
+    MatButtonModule,
 
     // Layout
     LayoutModule,
