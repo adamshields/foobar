@@ -1,0 +1,43 @@
+
+#navbar {
+    height: 32px;
+    margin-left: 25%;
+    margin-right: 15%;
+    background-color: aqua;
+    overflow: hidden;
+}
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.secondary-toolbar {
+    background-color: #292b30;
+    height: 80px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: gray;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.topnav .search-container {
+    float: right;
+}
+
+.topnav input[type="text"] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 12px;
+    border: none;
+}
