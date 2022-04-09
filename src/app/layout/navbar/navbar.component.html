@@ -1,15 +1,14 @@
 <mat-toolbar class="secondary-toolbar justify-content-lg-between">
     <div class="row">
-        <div class="logo text-white row mt-1 m1-2" routerLink="/main">
+        <div class="logo row mt-1 m1-2" routerLink="/main">
             <h1 style="flex: 1 1 auto;">App</h1>
             <mat-icon inline="true">bolt</mat-icon>
         </div>
     </div>
-    <button mat-icon-button matTooltip="Change Color Theme">
-        <!-- <mat-slide-toggle style="flex: 1 1 auto" class="settings-button">invert_colors</mat-slide-toggle> -->
+    <button mat-icon-button matTooltip="Change Color Theme" (click)="toggleDarkMode()">
+        <mat-icon style="flex: 1 1 auto" >invert_colors</mat-icon>
     </button>
     <mat-slide-toggle (click)="toggleDarkMode()"></mat-slide-toggle>
-
  </mat-toolbar>
 
 <div class="topnav">

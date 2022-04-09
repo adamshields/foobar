@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { ThemeService } from 'src/app/theme.service';
 
@@ -9,9 +9,9 @@ import { ThemeService } from 'src/app/theme.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  @Input() isDarkMode: boolean;
-  @Output()
-  showFiller = false;
+
+  isDarkMode: boolean;
+
 
   constructor(private themeService: ThemeService) {
     this.themeService.initTheme();
