@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListUsersComponent } from './list-users/list-users.component';
 
+// import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -9,10 +10,11 @@ import { ListUsersComponent } from './list-users/list-users.component';
     ListUsersComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    // MatButtonModule
   ],
   exports: [
-    ListUsersComponent
+    ListUsersComponent,
   ]
 })
 export class UsersModule { }

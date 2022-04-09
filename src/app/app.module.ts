@@ -5,30 +5,40 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatSidenavModule } from '@angular/material/sidenav';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutModule } from './layout/layout.module';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatButtonModule} from '@angular/material/button';
+
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'contactmanager', loadChildren: () => import ('./contactmanager/contactmanager.module').then(m => m.ContactmanagerModule)},
+  { path: 'demo', loadChildren: () => import ('./demo/demo.module').then(m => m.DemoModule)},
+  { path: '**', redirectTo: 'contactmanager'}
+];
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    // MatMenuModule,
-    MatButtonModule,
+    FlexLayoutModule,
+    RouterModule.forRoot(routes),
 
     // Layout
     LayoutModule,
 
     // Material
-    MatSidenavModule
+    // MaterialModule,
+
+    // Forms
+    // FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
